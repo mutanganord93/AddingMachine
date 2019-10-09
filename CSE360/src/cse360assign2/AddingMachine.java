@@ -8,32 +8,40 @@ package cse360assign2;
 
 public class AddingMachine 
 {
+	/**
+	 * create a private variable Myhistory to keep track of all history operation
+	 */
 	private int total;
+	private String Myhistory;
 	
 	public AddingMachine () 
 	{
 		total = 0;  
-		// not needed - included for clarity
+		Myhistory = "";
 	}
 	
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	public void add (int value) 
 	{
-		
+		total = total + value;
+		/**Concatenate value and sign to Myhistory*/
+		Myhistory += " + " + value;
 	}
 	
 	public void subtract (int value) 
 	{
-		
+		total = total - value;
+		Myhistory += " - " + value;
 	}
 	
 	public String toString () 
 	{
-		return "";
+		/**return a string which start with 0*/
+		return "0" + Myhistory ;
 	}
 	
 	public void clear() 
