@@ -14,6 +14,7 @@ public class AddingMachine
 	private int total;
 	private String Myhistory;
 	
+	
 	public AddingMachine () 
 	{
 		total = 0;  
@@ -24,7 +25,11 @@ public class AddingMachine
 	{
 		return total;
 	}
-	
+	/**
+	 * method that add value to total
+	 * and concatenate total result to a string
+	 * @param value is the number added to total
+	 */
 	public void add (int value) 
 	{
 		total = total + value;
@@ -38,9 +43,11 @@ public class AddingMachine
 		Myhistory += " - " + value;
 	}
 	
+	/**
+	 * method is used to return a string history of all arithmetic operations starting at 0
+	 */
 	public String toString () 
 	{
-		/**return a string which start with 0*/
 		return "0" + Myhistory ;
 	}
 	
